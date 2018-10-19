@@ -80,11 +80,12 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@XXXX
 ssh其实是一个很强大且很成功的协议。ssh协议还可以用于传输文件，称作SFTP协议。只要开通了ssh，无需其他操作默认具有sftp。
 在Xshell、Remmina中也带有这样的工具。这个自己随便点点就能发现了。
 当然命令行也是可以的
-```
+```bash
 scp html.rar $login_name@$login_host:/tmp 
 ```
 配合上上一部分讲的expect就能写自动脚本发包。
-```
+#### 发包
+```bash
 #!/usr/bin/expect -f
 set login_name "root"
 set login_host "172.66.66.66"
