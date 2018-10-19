@@ -67,6 +67,6 @@ ls
 然后我们就要把id_rsa里面的内容推入目标机器的~/.ssh/authorized_keys里面
 这里也有命令
 ```
-ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.1.100
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@XXXX
 
 ```
