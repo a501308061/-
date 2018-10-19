@@ -70,8 +70,29 @@ ls
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@XXXX
 
 ```
+所以有时候某些同事写的发包脚本以前都是不用输密码的，现在突然要你输密码了，说不定就是公钥被重新生成了。
 #### 秘钥认证
 其实秘钥也是密码的一种变体。以前拿的密码认证，现在拿的文件认证而已。
 不过秘钥比密码强大的一点是，可以一个文件认证多台服务器。  
 这种一般运行在云服务器中。由开发商提供一个秘钥文件和一个跳板机（公网ip，低权限）和目标机（内外ip，高权限）。使用这个秘钥就能进入跳板机和你的目标机器。
 参考的命令是ssh-add
+### ssh的附加协议
+ssh其实是一个很强大且很成功的协议。ssh协议还可以用于传输文件，称作SFTP协议。只要开通了ssh，无需其他操作默认具有sftp。
+在Xshell、Remmina中也带有这样的工具。这个自己随便点点就能发现了。
+当然命令行也是可以的
+```
+scp html.rar $login_name@$login_host:/tmp 
+```
+配合上上一部分讲的expect就能写自动脚本发包。
+```
+#!/usr/bin/expect -f
+set login_name "root"
+set login_host "172.66.66.66"
+spawn scp html.rar $login_name@$login_host:/home/deploy/mytemp/tot 
+expect "password"
+send "wodemiima\r"
+expect "100%"
+```
+此外可以灵活增加语句，传完包之后，立即执行目标机器上的一个脚本，这个脚本又是这样的传包的脚本，一路scp到目标机器然后执行发包的脚本。
+这里就不再多说了。  
+建议途中经过的跳板机都做免密码登录。这样命令可以少很多。
