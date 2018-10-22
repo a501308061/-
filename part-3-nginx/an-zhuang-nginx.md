@@ -40,8 +40,8 @@ make install
 本文的环境是Redhat6.5，在Ubuntu上的依赖命令请自行探索。
 而Windows上nginx的安装更为简单。  
 只需要把压缩包解开，然后点击nginx.exe即可。  
-需要重启（关闭）时，只需要按着shift+右键，打开命令行，输入nginx -s reload（stop）
-
+需要重启（关闭）时，只需要按着shift+右键，打开命令行，输入nginx -s reload（stop）  
+此外，Windows环境下多次启动不会报错，造成僵尸进程。所以请确定你的nginx没有启动才双击。
 
 
 
