@@ -14,4 +14,9 @@
 * [linux基础指令](part-2-linuxji-chu/linuxji-chu-zhi-ling.md)
 * [linux文件系统](part-2-linuxji-chu/linuxwen-jian-xi-tong.md)
 * [linux多服务器之间通信](part-2-linuxji-chu/linuxduo-fu-wu-qi-zhi-jian-tong-xin.md)
+* [linux进程管理](part-2-linuxji-chu/linuxjin-cheng-guan-li.md)
+
+## part 3 nginx
+
+* [安装nginx](part-3-nginx/an-zhuang-nginx.md)
 
