@@ -19,4 +19,7 @@
 ## part 3 nginx
 
 * [安装nginx](part-3-nginx/an-zhuang-nginx.md)
+* [nginx配置详解](part-3-nginx/nginxpei-zhi-xiang-jie.md)
+* [nginx的优化配置](part-3-nginx/nginxde-you-hua-pei-zhi.md)
+* [nginx的封装集成——openresty](part-3-nginx/nginxde-feng-zhuang-ji-cheng-2014-2014-openresty.md)
 
