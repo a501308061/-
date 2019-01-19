@@ -60,8 +60,9 @@ git --version
 
 ## SourceTree
 
-由于我的系统是linux没有截图，但是SourceTree的使用方法和SmartGit大同小异。区别主要是  
-1.界面更好看了  
-2.有中文字体  
-3.注册较为麻烦、内存消耗大
+SourceTree是另一个比较好的选择，界面与SmartGit样子相当，以下是mac的截图  
+![](/assets/屏幕快照 2019-01-19 下午9.23.33.png)  
+![](/assets/屏幕快照 2019-01-19 下午9.22.26.png)  
+与SmartGit相比，有中文的版本，不过注册过程相对麻烦，需要科学上网。
+
 

@@ -89,7 +89,7 @@ scp html.rar $login_name@$login_host:/tmp
 #!/usr/bin/expect -f
 set login_name "root"
 set login_host "172.66.66.66"
-spawn scp html.rar $login_name@$login_host:/home/deploy/mytemp/tot 
+spawn scp html.rar $login_name@$login_host:/home/deploy 
 expect "password"
 send "wodemiima\r"
 expect "100%"
