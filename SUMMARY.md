@@ -23,9 +23,13 @@
 * [nginx的优化配置](part-3-nginx/nginxde-you-hua-pei-zhi.md)
 * [nginx的封装集成——openresty](part-3-nginx/nginxde-feng-zhuang-ji-cheng-2014-2014-openresty.md)
 
-## React
+## part 4 React初探
 
 * [React带来的提升](react/reactdai-lai-de-ti-sheng.md)
 * [Redux](react/redux.md)
 * [react-router](react/react-router.md)
+
+## part5 JS基础
+
+* [闭包](part5-es2015/es.md)
 
