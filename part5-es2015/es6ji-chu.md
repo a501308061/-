@@ -56,3 +56,16 @@ a=()=>{return 'a'}
 a=()=>'a'
 ```
 以上三种形式是的效果是一致的。
+
+## 未赋值变量给予默认值
+```
+function a(c='hello') {
+    console.log(c)
+}
+a()//'hello'
+a('js')//'js'
+```
+
+
+## 思考题
+如何用es5实现es6中的let呢？
