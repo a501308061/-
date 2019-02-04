@@ -34,4 +34,5 @@
 * [this指向与闭包](part5-es2015/es.md)
 * [es6基础1-变量与函数](part5-es2015/es6ji-chu.md)
 * [es6基础2-对象与数组](part5-es2015/es6ji-chu-2-dui-xiang-yu-shu-zu.md)
+* [es6基础3-新增对象](part5-es2015/es6ji-chu-3-xin-zeng-dui-xiang.md)
 

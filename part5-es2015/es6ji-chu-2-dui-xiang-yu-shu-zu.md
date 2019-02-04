@@ -64,5 +64,65 @@ console.log(a.y)//7
 ```
 上述的例子已经清晰的看见何谓浅拷贝了。
 
-### 枚举
+### 对象枚举
+例如有一个对象obj是这样子的
+```json
+{
+    "a":"aaa",
+    "b":"bbb",
+    "c":"ccc"
+}
+```
+如果调用Object.key(obj),将会返回["a","b","c"]。
+如果调用Object.value(obj),将会返回["aaa","bbb","ccc"]
 
+好处就是可以不用写for循环了。
+其实真正的好事是可以简单的进行链式调用。
+例如对象person是这个样子的
+```json
+{
+    "alan":{"ishere":ture,"seat":"1A"},
+    "bob":{"ishere":ture,"seat":"2C"},
+    "may":{"ishere":ture,"seat":"10F"},
+    "jacky":{"ishere":false,"seat":"2A"},
+    "peter":{"ishere":ture,"seat":"3D"}
+}
+```
+我们就可以链式调用的渲染出内容
+```js
+Object.value(person).filter((key)=>key.ishere).map((key)=><div>{key.seat}</div>)
+```
+虽然es5也能做链式调用，不过结果颇为冗长，不可能达到如此简洁的效果。
+此外再说一点，不提倡再es6中使用冗长的for循环。需要用for循环进行处理的可以通过map函数+filter函数进行处理。
+
+此外对象还有其他方法，不过使用的情况较少，这里就不多说了。
+## 数组新增方法
+### 包含
+```js
+["1","bob",true].include("1") //返回true
+```
+很简单是不是，在es5中需要用indexof去处理，比较麻烦。
+此外顺带提一句，以下的代码可以用Array.include去处理
+```js
+if (obj.canbook == "1" || obj.canbook == "6"){
+}
+```
+其实这样的代码有待商榷。如果canbook的情况增加到1、3、6、10的时候难道我们还要继续这样或下去吗？
+```js
+const canbookList = ["1","6"]
+if (canbookList.include(obj.canbook)){
+}
+```
+
+### 解构
+解构和对象的解构一样
+```js
+const a =[111,22,33,444]
+Math.max(...a)//返回数组的最大值
+[foo,...bar]=a//foo=111,bar=[22,33,444]
+```
+同时，它还有个逆运算Array.of
+```js
+Array.of(111,22,33,444)//[111,22,33,444]
+```
+此外数组还有转换等方法，不过这个我们留待后面再讲。
